@@ -3,6 +3,7 @@
 
 #include <stdio.h>
 #include <string>
+#include <netinet/in.h>
 
 #include "msg_logger.h"
 
