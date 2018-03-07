@@ -25,7 +25,11 @@ DEPS=$(SRCS:.cpp=.d)
 
 CPPFLAGS += -I.. -DNOMAIN
 
-EXTRA_LDFLAGS += -lresolv -levent -levent_pthreads
+EXTRA_LDFLAGS += -levent -levent_pthreads
+
+ifneq ($(OS), freebsd)
+	EXTRA_LDFLAGS += -lresolv
+endif
 
 .PHONY: all
 all: ../../Makefile.defs sip_stack libresample
