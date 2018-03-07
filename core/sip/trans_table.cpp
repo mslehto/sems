@@ -509,7 +509,7 @@ inline void compute_tag(char* tag, unsigned int hl, unsigned int hh)
     tag[7] = _tag_lookup[(hh >> 10)&0x3F];
 }
 
-static atomic_int __branch_cnt;
+static atomic_intt __branch_cnt;
 
 void compute_sl_to_tag(char* to_tag/*[8]*/, const sip_msg* msg)
 {
