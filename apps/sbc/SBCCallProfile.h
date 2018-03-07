@@ -218,8 +218,8 @@ struct SBCCallProfile
   int rtprelay_bw_limit_rate;
   int rtprelay_bw_limit_peak;
 
-  list<atomic_int*> aleg_rtp_counters;
-  list<atomic_int*> bleg_rtp_counters;
+  list<atomic_intt*> aleg_rtp_counters;
+  list<atomic_intt*> bleg_rtp_counters;
 
   string outbound_interface;
   int outbound_interface_value;

@@ -93,7 +93,7 @@ class _AmRtpReceiver
   AmRtpReceiverThread* receivers;
   unsigned int         n_receivers;
 
-  atomic_int next_index;
+  atomic_intt next_index;
 
 protected:    
   _AmRtpReceiver();

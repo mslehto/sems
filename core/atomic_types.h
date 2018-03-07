@@ -36,7 +36,7 @@
 
 
 // 32 bit unsigned integer
-class atomic_int
+class atomic_intt
 #if !HAVE_ATOMIC_CAS
   : protected AmMutex
 #endif
@@ -45,7 +45,7 @@ class atomic_int
 
 
 public:
-  atomic_int() : i(0) {}
+  atomic_intt() : i(0) {}
 
   void set(unsigned int val) {
     i = val;
@@ -194,7 +194,7 @@ void dec_ref(atomic_ref_cnt* rc);
 
 class atomic_ref_cnt
 {
-  atomic_int ref_cnt;
+  atomic_intt ref_cnt;
 
 protected:
   atomic_ref_cnt() {}

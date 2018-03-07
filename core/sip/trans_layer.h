@@ -76,12 +76,12 @@ class msg_logger;
 class trans_stats
 {
   private:
-    atomic_int sent_requests;
-    atomic_int sent_replies;
-    atomic_int received_requests;
-    atomic_int received_replies;
-    atomic_int sent_reply_retrans;
-    atomic_int sent_request_retrans;
+    atomic_intt sent_requests;
+    atomic_intt sent_replies;
+    atomic_intt received_requests;
+    atomic_intt received_replies;
+    atomic_intt sent_reply_retrans;
+    atomic_intt sent_request_retrans;
 
   public:
 
