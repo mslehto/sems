@@ -32,6 +32,7 @@
 #include "AmSession.h"
 #include <string.h>
 #include <sys/stat.h>
+#include <sys/wait.h>
 #include <sys/types.h>
 #include <stdio.h>
 #include <stdlib.h>
