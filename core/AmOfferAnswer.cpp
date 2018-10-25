@@ -282,7 +282,15 @@ int AmOfferAnswer::onTxSdp(unsigned int m_cseq, const AmMimeBody& body)
     break;
 
   case OA_OfferRecved:
-    setState(OA_Completed);
+    if (dlg->reply.cseq_method == SIP_METH_INVITE && reply.code < 200)
+    {
+      DBG("Provisional reply, do not change OA state\n");
+    }
+    else
+    {
+      DBG("Final reply, set state to OA_Completed\n");
+      setState(OA_Completed);
+    }
     break;
 
   case OA_OfferSent:
